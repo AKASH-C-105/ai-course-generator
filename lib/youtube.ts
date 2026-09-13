@@ -114,7 +114,7 @@ export async function getYouTubeVideoId(query: string): Promise<string> {
     });
     const videoId = bestMatch?.videoId || "";
 
-    if (videoId) {
+    if (bestMatch) {
       console.log(
         `[YouTube Search] Resolved relevant video: "${bestMatch.title}" (${bestMatch.score.toFixed(2)})`,
       );
